@@ -66,6 +66,7 @@ review:
 
 .PHONY: clean
 clean:
+	$(RM) --recursive ./.cache
 	$(RM) --recursive ./build
 	$(RM) --recursive ./dist
 	find $(source_dir) -name "*.pyc" -type f -exec $(RM) {} +
