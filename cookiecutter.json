@@ -1,3 +1,4 @@
 {
-    "project_name": "Thing"
+    "project_name": "Thing",
+    "main_package_name": "{{ cookiecutter.project_name | lower }}"
 }
