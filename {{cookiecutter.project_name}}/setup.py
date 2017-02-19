@@ -48,8 +48,8 @@ def _do_setup():
         version=VERSION,
         # options
         install_requires=INSTALL_REQUIREMENTS,
-        packages=PACKAGES,
         package_dir=PACKAGE_DIRECTORIES,
+        packages=PACKAGES,
     )
     return None
 
