@@ -4,6 +4,8 @@
 
 import unittest
 
+import webtest
+
 import {{cookiecutter.main_package_name}}
 
 
@@ -12,15 +14,18 @@ class TestFunctional(unittest.TestCase):
     """
 
     def setUp(self):
+        wsgi_app = thing.main.entry_point({})
+        self.test_app = webtest.TestApp(wsgi_app)
         return None
 
     def tearDown(self):
         return None
 
-    def test_functional(self):  # pylint: disable=no-self-use
+    def test_functional(self):
         """ Functional test
         """
-        hasattr({{cookiecutter.main_package_name}}, '__version__')
+        self.test_app.get('/', status=200)
         return None
+
 
 # EOF

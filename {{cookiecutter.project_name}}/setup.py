@@ -12,6 +12,8 @@ DESCRIPTION = "{{cookiecutter.project_name}}"
 
 
 INSTALL_REQUIREMENTS = [
+    'pyramid',
+    'waitress',
 ]
 
 
@@ -38,6 +40,16 @@ PACKAGE_DIRECTORIES = {
 LICENSE = 'Apache-2.0'  # https://spdx.org/licenses/
 
 
+ENTRY_POINTS = {
+    'paste.app_factory': [
+        'main_entry_point={{cookiecutter.main_package_name}}.main:entry_point',
+    ],
+    'console_scripts': [
+        '{}=pyramid.scripts.pserve:main'.format(NAME),
+    ],
+}
+
+
 def _do_setup():
     setuptools.setup(
         # metadata
@@ -47,6 +59,7 @@ def _do_setup():
         long_description=LONG_DESCRIPTION,
         version=VERSION,
         # options
+        entry_points=ENTRY_POINTS,
         install_requires=INSTALL_REQUIREMENTS,
         package_dir=PACKAGE_DIRECTORIES,
         packages=PACKAGES,

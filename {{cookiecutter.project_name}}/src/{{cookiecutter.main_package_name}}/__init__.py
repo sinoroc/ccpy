@@ -4,6 +4,8 @@
 
 import pkg_resources
 
+from . import main
+
 
 # PEP 396
 __version__ = pkg_resources.get_distribution(  # pylint: disable=no-member

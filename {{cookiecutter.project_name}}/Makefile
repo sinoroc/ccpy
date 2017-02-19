@@ -27,12 +27,18 @@ install:
 
 
 .PHONY: package
-package: wheel
+package: wheel pex
 
 
 .PHONY: wheel
 wheel:
 	python setup.py bdist_wheel
+
+
+.PHONY: pex
+pex:
+	python setup.py bdist_pex\
+		--pex-args='--requirement="requirements/install.txt"'
 
 
 .PHONY: lint
