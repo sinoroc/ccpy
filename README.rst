@@ -22,6 +22,7 @@ Templates available:
 
 * ``library``
 
+* ``pyramid``
 
 
 Usage
