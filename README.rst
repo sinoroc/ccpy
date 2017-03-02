@@ -25,7 +25,6 @@ Templates available:
 * ``pyramid``
 
 
-
 Usage
 =====
 
