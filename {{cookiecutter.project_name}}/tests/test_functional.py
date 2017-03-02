@@ -14,7 +14,7 @@ class TestFunctional(unittest.TestCase):
     """
 
     def setUp(self):
-        wsgi_app = thing.main.entry_point({})
+        wsgi_app = {{cookiecutter.main_package_name}}.main.entry_point({})
         self.test_app = webtest.TestApp(wsgi_app)
         return None
 
