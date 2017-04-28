@@ -12,15 +12,15 @@ class TestFunctional(unittest.TestCase):
     """
 
     def setUp(self):
-        return None
+        return
 
     def tearDown(self):
-        return None
+        return
 
     def test_functional(self):  # pylint: disable=no-self-use
         """ Functional test
         """
         hasattr({{cookiecutter.main_package_name}}, '__version__')
-        return None
+        return
 
 # EOF
