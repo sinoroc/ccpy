@@ -8,7 +8,7 @@ source_dir := ./src
 tests_dir := ./tests
 
 
-.DEFAULT_GOAL: develop
+.DEFAULT_GOAL := develop
 
 
 .PHONY: nothing
@@ -69,10 +69,21 @@ clean:
 	$(RM) --recursive ./.cache
 	$(RM) --recursive ./build
 	$(RM) --recursive ./dist
-	find $(source_dir) -name "*.pyc" -type f -exec $(RM) {} +
-	find $(tests_dir) -name "*.pyc" -type f -exec $(RM) {} +
-	find $(source_dir) -name "__pycache__" -type d -exec $(RM) --recursive {} +
-	find $(tests_dir) -name "__pycache__" -type d -exec $(RM) --recursive {} +
+	find $(source_dir) -name '*.egg-info' -type d -exec $(RM) --recursive {} +
+	find $(tests_dir) -name '*.egg-info' -type d -exec $(RM) --recursive {} +
+	find $(source_dir) -name '*.pyc' -type f -exec $(RM) {} +
+	find $(tests_dir) -name '*.pyc' -type f -exec $(RM) {} +
+	find $(source_dir) -name '__pycache__' -type d -exec $(RM) --recursive {} +
+	find $(tests_dir) -name '__pycache__' -type d -exec $(RM) --recursive {} +
+
+
+#
+# Options
+#
+
+# Disable default rules and suffixes (improve speed and avoid unexpected behaviour)
+MAKEFLAGS := --no-builtin-rules
+.SUFFIXES:
 
 
 # EOF
