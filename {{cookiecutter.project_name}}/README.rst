@@ -20,10 +20,10 @@ necessary dependencies::
 
     tox -r -e develop
 
-This creates a Python virtual environment in the ``.venv`` directory. It can
-be activated with the following command::
+This creates a Python virtual environment in the ``.tox/develop`` directory. It
+can be activated with the following command::
 
-    . .venv/bin/activate
+    . .tox/develop/bin/activate
 
 
 Run test suite
