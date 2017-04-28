@@ -7,8 +7,8 @@ import os
 import setuptools
 
 
-NAME = "{{cookiecutter.project_name}}"
-DESCRIPTION = "{{cookiecutter.project_name}}"
+NAME = '{{cookiecutter.project_name}}'
+DESCRIPTION = "{{cookiecutter.project_name}} Pyramid application"
 
 
 INSTALL_REQUIREMENTS = [
