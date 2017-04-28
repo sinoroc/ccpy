@@ -16,16 +16,16 @@ class TestFunctional(unittest.TestCase):
     def setUp(self):
         wsgi_app = {{cookiecutter.main_package_name}}.main.entry_point({})
         self.test_app = webtest.TestApp(wsgi_app)
-        return None
+        return
 
     def tearDown(self):
-        return None
+        return
 
     def test_functional(self):
         """ Functional test
         """
         self.test_app.get('/', status=200)
-        return None
+        return
 
 
 # EOF

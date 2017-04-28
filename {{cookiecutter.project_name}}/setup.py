@@ -64,7 +64,7 @@ def _do_setup():
         package_dir=PACKAGE_DIRECTORIES,
         packages=PACKAGES,
     )
-    return None
+    return
 
 
 if __name__ == '__main__':
