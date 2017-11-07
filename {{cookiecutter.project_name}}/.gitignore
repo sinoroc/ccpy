@@ -6,8 +6,9 @@
 /.cache/
 /.eggs/
 /.tox/
-/dist/
 /build/
+/dist/
+*.dist-info/
 *.egg-info/
 __pycache__/
 *.pyc
