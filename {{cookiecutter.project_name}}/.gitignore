@@ -5,10 +5,10 @@
 /*.egg
 /.cache/
 /.eggs/
-/.venv/
 /.tox/
-/dist/
 /build/
+/dist/
+*.dist-info/
 *.egg-info/
 __pycache__/
 *.pyc

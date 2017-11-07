@@ -75,8 +75,8 @@ clean:
 	$(RM) --recursive ./.cache
 	$(RM) --recursive ./build
 	$(RM) --recursive ./dist
+	find $(source_dir) -name '*.dist-info' -type d -exec $(RM) --recursive {} +
 	find $(source_dir) -name '*.egg-info' -type d -exec $(RM) --recursive {} +
-	find $(tests_dir) -name '*.egg-info' -type d -exec $(RM) --recursive {} +
 	find $(source_dir) -name '*.pyc' -type f -exec $(RM) {} +
 	find $(tests_dir) -name '*.pyc' -type f -exec $(RM) {} +
 	find $(source_dir) -name '__pycache__' -type d -exec $(RM) --recursive {} +
