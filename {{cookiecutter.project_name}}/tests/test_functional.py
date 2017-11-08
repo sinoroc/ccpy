@@ -23,4 +23,5 @@ class TestFunctional(unittest.TestCase):
         hasattr({{cookiecutter.main_package_name}}, '__version__')
         return
 
+
 # EOF
