@@ -6,11 +6,11 @@ import pyramid
 import pyramid.config
 
 
-def _root_view(dummy_context, dummy_request):
+def _root_view(unused_context, unused_request):
     return pyramid.httpexceptions.HTTPOk()
 
 
-def entry_point(dummy_global_config, **settings):
+def entry_point(unused_global_config, **settings):
     """ Application entry point
     """
     config = pyramid.config.Configurator(
