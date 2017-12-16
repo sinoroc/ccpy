@@ -27,7 +27,12 @@ install:
 
 
 .PHONY: package
-package: wheel pex
+package: sdist wheel pex
+
+
+.PHONY: sdist
+sdist:
+	python setup.py sdist
 
 
 .PHONY: wheel
