@@ -37,39 +37,36 @@ REQUIREMENTS_EXTRAS = {
 }
 
 
-HERE = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(HERE, 'README.rst')) as f:
-    README = f.read()
-with open(os.path.join(HERE, 'CHANGELOG.rst')) as f:
-    CHANGELOG = f.read()
-
-
-LONG_DESCRIPTION = README
-VERSION = CHANGELOG.splitlines()[4]
-
-
-SOURCE_DIRECTORY = 'src'
-PACKAGES = setuptools.find_packages(
-    where=SOURCE_DIRECTORY,
-)
-PACKAGE_DIRECTORIES = {
-    '': SOURCE_DIRECTORY,
-}
-
-
 def _do_setup():
+    here = os.path.abspath(os.path.dirname(__file__))
+    with open(os.path.join(here, 'README.rst')) as file_:
+        readme = file_.read()
+    with open(os.path.join(here, 'CHANGELOG.rst')) as file_:
+        changelog = file_.read()
+
+    long_description = readme
+    version = changelog.splitlines()[4]
+
+    source_directory = 'src'
+    packages = setuptools.find_packages(
+        where=source_directory,
+    )
+    package_directories = {
+        '': source_directory,
+    }
+
     setuptools.setup(
         name=NAME,
-        version=VERSION,
+        version=version,
         # metadata
         description=DESCRIPTION,
         license=LICENSE,
-        long_description=LONG_DESCRIPTION,
+        long_description=long_description,
         # options
         extras_require=REQUIREMENTS_EXTRAS,
         install_requires=REQUIREMENTS_INSTALL,
-        package_dir=PACKAGE_DIRECTORIES,
-        packages=PACKAGES,
+        package_dir=package_directories,
+        packages=packages,
     )
     return
 
