@@ -11,9 +11,30 @@ NAME = '{{cookiecutter.project_name}}'
 DESCRIPTION = "{{cookiecutter.project_name}} library"
 
 
+LICENSE = 'Apache-2.0'  # https://spdx.org/licenses/
+
+
 REQUIREMENTS_INSTALL = [
     'setuptools',  # needed for 'pkg_resources'
 ]
+
+
+REQUIREMENTS_PACKAGE = [
+    'wheel',
+]
+
+
+REQUIREMENTS_TEST = [
+    'pytest',
+    'pytest-pep8',
+    'pytest-pylint',
+]
+
+
+REQUIREMENTS_EXTRAS = {
+    'package': REQUIREMENTS_PACKAGE,
+    'test': REQUIREMENTS_TEST,
+}
 
 
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -36,9 +57,6 @@ PACKAGE_DIRECTORIES = {
 }
 
 
-LICENSE = 'Apache-2.0'  # https://spdx.org/licenses/
-
-
 def _do_setup():
     setuptools.setup(
         name=NAME,
@@ -48,6 +66,7 @@ def _do_setup():
         license=LICENSE,
         long_description=LONG_DESCRIPTION,
         # options
+        extras_require=REQUIREMENTS_EXTRAS,
         install_requires=REQUIREMENTS_INSTALL,
         package_dir=PACKAGE_DIRECTORIES,
         packages=PACKAGES,
