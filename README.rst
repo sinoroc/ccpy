@@ -35,10 +35,7 @@ See `cookiecutter documentation`_ for details.
     cookiecutter <repository> --checkout <branch>
 
 
-Links
-=====
-
-.. target-notes::
+.. Links
 
 .. _`cookiecutter`: https://pypi.python.org/pypi/cookiecutter/
 .. _`cookiecutter documentation`: https://cookiecutter.readthedocs.io/
