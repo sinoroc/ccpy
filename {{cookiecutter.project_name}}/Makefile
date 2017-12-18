@@ -21,11 +21,6 @@ develop:
 	python setup.py develop
 
 
-.PHONY: install
-install:
-	python setup.py install
-
-
 .PHONY: package
 package: sdist wheel pex
 
