@@ -43,7 +43,7 @@ pex:
 
 .PHONY: check
 check:
-	python setup.py check
+	python setup.py check --restructuredtext
 
 
 .PHONY: lint
