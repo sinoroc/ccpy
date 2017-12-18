@@ -1,9 +1,9 @@
 #
 
 
-pex==1.1.20
-setuptools>=5.7,<31.0  # for pex==1.1.20
-wheel>=0.26.0,<0.30.0  # for pex==1.1.20
+pex==1.2.15
+setuptools<34.0,>=20.3  # for pex==1.2.15
+wheel<0.30.0,>=0.26.0  # for pex==1.2.15
 
 
 # EOF

@@ -43,7 +43,7 @@ wheel:
 .PHONY: pex
 pex:
 	python setup.py bdist_pex\
-		--pex-args='--requirement="requirements/install.txt"'
+		--pex-args='--requirement="requirements.txt"'
 
 
 .PHONY: lint

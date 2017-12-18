@@ -1,17 +1,7 @@
 #
 
 
-PasteDeploy==1.5.2
-hupper==0.4.2
-pyramid==1.8.1
-repoze.lru==0.6
-setuptools  # needed for 'pkg_resources'
-translationstring==1.3
-venusian==1.0
-WebOb==1.7.1
-waitress==1.0.2
-zope.deprecation==4.2.0
-zope.interface==4.3.3
+# Pin depencies that are known to work (for example for 'bdist_pex')
 
 
 # EOF

@@ -11,11 +11,44 @@ NAME = '{{cookiecutter.project_name}}'
 DESCRIPTION = "{{cookiecutter.project_name}} Pyramid application"
 
 
+LICENSE = 'Apache-2.0'  # https://spdx.org/licenses/
+
+
 REQUIREMENTS_INSTALL = [
     'pyramid',
     'setuptools',  # needed for 'pkg_resources'
     'waitress',
 ]
+
+
+REQUIREMENTS_PACKAGE = [
+    'pex',
+    'wheel',
+]
+
+
+REQUIREMENTS_TEST = [
+    'pytest',
+    'pytest-pep8',
+    'pytest-pylint',
+    'WebTest',
+]
+
+
+REQUIREMENTS_EXTRAS = {
+    'package': REQUIREMENTS_PACKAGE,
+    'test': REQUIREMENTS_TEST,
+}
+
+
+ENTRY_POINTS = {
+    'paste.app_factory': [
+        'main_entry_point={{cookiecutter.main_package_name}}.main:entry_point',
+    ],
+    'console_scripts': [
+        '{}=pyramid.scripts.pserve:main'.format(NAME),
+    ],
+}
 
 
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -38,19 +71,6 @@ PACKAGE_DIRECTORIES = {
 }
 
 
-LICENSE = 'Apache-2.0'  # https://spdx.org/licenses/
-
-
-ENTRY_POINTS = {
-    'paste.app_factory': [
-        'main_entry_point={{cookiecutter.main_package_name}}.main:entry_point',
-    ],
-    'console_scripts': [
-        '{}=pyramid.scripts.pserve:main'.format(NAME),
-    ],
-}
-
-
 def _do_setup():
     setuptools.setup(
         name=NAME,
@@ -61,6 +81,7 @@ def _do_setup():
         long_description=LONG_DESCRIPTION,
         # options
         entry_points=ENTRY_POINTS,
+        extras_require=REQUIREMENTS_EXTRAS,
         install_requires=REQUIREMENTS_INSTALL,
         package_dir=PACKAGE_DIRECTORIES,
         packages=PACKAGES,
