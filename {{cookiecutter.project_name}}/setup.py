@@ -1,5 +1,7 @@
-""" Setup script
-"""
+#!/usr/bin/env python
+
+
+""" Setup script """
 
 
 import os
