@@ -35,7 +35,7 @@ REQUIREMENTS_PACKAGE = [
 
 
 REQUIREMENTS_SETUP = [
-    'docutils',  # needed for simple 'python setup.py check --restructuredtext'
+    'docutils',  # needed for 'setup.py check --restructuredtext'
 ]
 
 
@@ -43,7 +43,6 @@ REQUIREMENTS_TEST = [
     'pytest',
     'pytest-pep8',
     'pytest-pylint',
-    'readme_renderer',  # needed for 'python setup.py check --restructuredtext'
     'WebTest',
 ]
 
