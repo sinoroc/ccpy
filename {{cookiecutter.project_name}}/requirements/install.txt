@@ -1,4 +1,7 @@
 #
 
 
+setuptools  # needed for 'pkg_resources'
+
+
 # EOF

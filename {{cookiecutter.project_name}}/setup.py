@@ -11,7 +11,8 @@ NAME = '{{cookiecutter.project_name}}'
 DESCRIPTION = "{{cookiecutter.project_name}} library"
 
 
-INSTALL_REQUIREMENTS = [
+REQUIREMENTS_INSTALL = [
+    'setuptools',  # needed for 'pkg_resources'
 ]
 
 
@@ -40,14 +41,14 @@ LICENSE = 'Apache-2.0'  # https://spdx.org/licenses/
 
 def _do_setup():
     setuptools.setup(
-        # metadata
         name=NAME,
+        version=VERSION,
+        # metadata
         description=DESCRIPTION,
         license=LICENSE,
         long_description=LONG_DESCRIPTION,
-        version=VERSION,
         # options
-        install_requires=INSTALL_REQUIREMENTS,
+        install_requires=REQUIREMENTS_INSTALL,
         package_dir=PACKAGE_DIRECTORIES,
         packages=PACKAGES,
     )
