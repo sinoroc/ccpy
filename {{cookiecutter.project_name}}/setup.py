@@ -11,8 +11,9 @@ NAME = '{{cookiecutter.project_name}}'
 DESCRIPTION = "{{cookiecutter.project_name}} Pyramid application"
 
 
-INSTALL_REQUIREMENTS = [
+REQUIREMENTS_INSTALL = [
     'pyramid',
+    'setuptools',  # needed for 'pkg_resources'
     'waitress',
 ]
 
@@ -52,15 +53,15 @@ ENTRY_POINTS = {
 
 def _do_setup():
     setuptools.setup(
-        # metadata
         name=NAME,
+        version=VERSION,
+        # metadata
         description=DESCRIPTION,
         license=LICENSE,
         long_description=LONG_DESCRIPTION,
-        version=VERSION,
         # options
         entry_points=ENTRY_POINTS,
-        install_requires=INSTALL_REQUIREMENTS,
+        install_requires=REQUIREMENTS_INSTALL,
         package_dir=PACKAGE_DIRECTORIES,
         packages=PACKAGES,
     )
