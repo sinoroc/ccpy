@@ -41,6 +41,11 @@ pex:
 		--pex-args='--requirement="requirements.txt"'
 
 
+.PHONY: check
+check:
+	python setup.py check
+
+
 .PHONY: lint
 lint:
 	pytest --pep8 --pylint -m 'pep8 or pylint'
@@ -66,7 +71,7 @@ pytest:
 
 
 .PHONY: review
-review:
+review: check
 	pytest --pep8 --pylint
 
 
