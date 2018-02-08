@@ -37,8 +37,7 @@ wheel:
 
 .PHONY: pex
 pex:
-	python setup.py bdist_pex\
-		--pex-args='--requirement="requirements.txt"'
+	python setup.py bdist_pex
 
 
 .PHONY: check
