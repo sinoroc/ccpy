@@ -18,7 +18,6 @@ class TestProjectVersion(unittest.TestCase):
             {{cookiecutter.main_package_name}}.__version__
         except AttributeError as version_exception:
             self.fail(version_exception)
-        return
 
 
 # EOF
