@@ -1,7 +1,0 @@
-#
-
-
-# Pin depencies that are known to work (for example for 'bdist_pex')
-
-
-# EOF
