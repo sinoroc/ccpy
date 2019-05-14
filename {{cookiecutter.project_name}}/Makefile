@@ -1,9 +1,6 @@
 #
 
 
-toxenvname ?= unknown
-
-
 source_dir := ./src
 tests_dir := ./test
 
