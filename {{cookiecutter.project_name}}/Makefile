@@ -8,11 +8,6 @@ tests_dir := ./test
 .DEFAULT_GOAL := develop
 
 
-.PHONY: nothing
-nothing:
-	true
-
-
 .PHONY: develop
 develop:
 	python setup.py develop
