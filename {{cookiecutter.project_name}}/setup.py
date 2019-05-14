@@ -27,6 +27,7 @@ REQUIREMENTS_INSTALL = [
 
 
 REQUIREMENTS_PACKAGE = [
+    'twine',
     'wheel',
 ]
 
@@ -35,7 +36,6 @@ REQUIREMENTS_TEST = [
     'pytest',
     'pytest-pep8',
     'pytest-pylint',
-    'readme_renderer',  # for 'setup.py check --restructuredtext'
 ]
 
 

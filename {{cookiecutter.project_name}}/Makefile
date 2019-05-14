@@ -14,7 +14,7 @@ develop:
 
 
 .PHONY: package
-package: sdist wheel
+package: sdist wheel check
 
 
 .PHONY: sdist
@@ -28,8 +28,9 @@ wheel:
 
 
 .PHONY: check
-check:
-	python3 setup.py check --restructuredtext
+check: sdist wheel
+	python3 -m twine check dist/*.tar.gz
+	python3 -m twine check dist/*.whl
 
 
 .PHONY: lint
