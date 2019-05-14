@@ -29,7 +29,7 @@ wheel:
 
 .PHONY: pex
 pex:
-	python setup.py bdist_pex
+	python3 setup.py bdist_pex
 
 
 .PHONY: check
