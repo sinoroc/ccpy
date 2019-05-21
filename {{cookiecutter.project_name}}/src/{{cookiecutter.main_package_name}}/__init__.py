@@ -8,7 +8,7 @@
 import pkg_resources
 
 from . import _meta
-from . import main
+from . import cli
 
 
 __version__ = _meta.VERSION  # PEP 396
