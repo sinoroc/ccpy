@@ -1,7 +1,7 @@
 {
     "project_name": "Thing",
     "main_package_name": "{{ cookiecutter.project_name | lower }}",
-    "url": "https://example.com/{{ cookiecutter.project_name | lower }}",
+    "url": "https://pypi.org/project/{{ cookiecutter.project_name }}/",
     "author": "John Doe",
     "author_email": "john.doe@example.com"
 }
