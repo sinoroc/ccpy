@@ -5,10 +5,10 @@
 """
 
 
-import pkg_resources
+import importlib_metadata
 
 
-VERSION = pkg_resources.get_distribution('{{cookiecutter.project_name}}').version
+VERSION = importlib_metadata.version('{{cookiecutter.project_name}}')
 
 
 # EOF
