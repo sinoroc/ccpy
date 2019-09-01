@@ -9,7 +9,7 @@ import os
 import setuptools
 
 
-def _do_setup():
+def _setup():
     here = os.path.abspath(os.path.dirname(__file__))
     with open(os.path.join(here, 'CHANGELOG.rst')) as file_:
         changelog = file_.read()
@@ -23,7 +23,7 @@ def _do_setup():
 
 
 if __name__ == '__main__':
-    _do_setup()
+    _setup()
 
 
 # EOF
