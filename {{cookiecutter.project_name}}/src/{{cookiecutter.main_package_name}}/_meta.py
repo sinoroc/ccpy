@@ -8,7 +8,9 @@
 import importlib_metadata
 
 
-VERSION = importlib_metadata.version('{{cookiecutter.project_name}}')
+PROJECT_NAME = '{{cookiecutter.project_name}}'
+
+VERSION = importlib_metadata.version(PROJECT_NAME)
 
 
 # EOF
