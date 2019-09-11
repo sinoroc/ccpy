@@ -24,6 +24,8 @@ Templates available:
 
 * ``pyramid``
 
+* ``application``
+
 
 Usage
 =====
