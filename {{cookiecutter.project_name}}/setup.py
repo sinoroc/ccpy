@@ -9,7 +9,8 @@ import os
 import setuptools
 
 
-def _setup():
+def main():
+    """ Setup routine """
     here = os.path.abspath(os.path.dirname(__file__))
     with open(os.path.join(here, 'CHANGELOG.rst')) as file_:
         changelog = file_.read()
@@ -23,7 +24,7 @@ def _setup():
 
 
 if __name__ == '__main__':
-    _setup()
+    main()
 
 
 # EOF
