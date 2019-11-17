@@ -36,12 +36,12 @@ check:
 
 .PHONY: lint
 lint:
-	python3 -m pytest --codestyle --pylint -m 'codestyle or pylint'
+	python3 -m pytest --pycodestyle --pylint -m 'pycodestyle or pylint'
 
 
 .PHONY: pycodestyle
 pycodestyle:
-	python3 -m pytest --codestyle -m codestyle
+	python3 -m pytest --pycodestyle -m pycodestyle
 
 
 .PHONY: pylint
@@ -60,7 +60,7 @@ pytest:
 
 .PHONY: review
 review: check
-	python3 -m pytest --codestyle --pylint
+	python3 -m pytest --pycodestyle --pylint
 
 
 .PHONY: clean
