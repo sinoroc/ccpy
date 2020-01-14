@@ -87,7 +87,7 @@ clean:
 #
 
 # Disable default rules and suffixes (improve speed and avoid unexpected behaviour)
-MAKEFLAGS := --no-builtin-rules
+MAKEFLAGS := --no-builtin-rules --warn-undefined-variables
 .SUFFIXES:
 
 
