@@ -5,7 +5,11 @@ source_dir := ./src
 tests_dir := ./test
 
 
-.DEFAULT_GOAL := develop
+.DEFAULT_GOAL := refresh
+
+
+.PHONY: refresh
+refresh: clean develop review package
 
 
 .PHONY: develop
@@ -88,7 +92,7 @@ clean:
 #
 
 # Disable default rules and suffixes (improve speed and avoid unexpected behaviour)
-MAKEFLAGS := --no-builtin-rules
+MAKEFLAGS := --no-builtin-rules --warn-undefined-variables
 .SUFFIXES:
 
 
