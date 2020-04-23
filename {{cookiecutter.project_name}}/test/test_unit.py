@@ -1,7 +1,6 @@
 """ Unit tests
 """
 
-
 import unittest
 
 import {{cookiecutter.main_package_name}}

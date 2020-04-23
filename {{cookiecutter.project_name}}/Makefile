@@ -33,6 +33,11 @@ wheel:
 	python3 -m twine check dist/*.whl
 
 
+.PHONY: format
+format:
+	python3 -m yapf --in-place --parallel --recursive setup.py src test
+
+
 .PHONY: check
 check:
 	python3 setup.py check
@@ -40,7 +45,7 @@ check:
 
 .PHONY: lint
 lint:
-	python3 -m pytest --pycodestyle --pylint -m 'pycodestyle or pylint'
+	python3 -m pytest --pycodestyle --pylint --yapf -m 'pycodestyle or pylint or yapf'
 
 
 .PHONY: pycodestyle
@@ -51,6 +56,11 @@ pycodestyle:
 .PHONY: pylint
 pylint:
 	python3 -m pytest --pylint -m pylint
+
+
+.PHONY: yapf
+yapf:
+	python3 -m pytest --yapf -m yapf
 
 
 .PHONY: test
@@ -64,7 +74,7 @@ pytest:
 
 .PHONY: review
 review: check
-	python3 -m pytest --pycodestyle --pylint
+	python3 -m pytest --pycodestyle --pylint --yapf
 
 
 .PHONY: clean
