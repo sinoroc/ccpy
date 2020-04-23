@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-
 """ Setup script """
-
 
 import pathlib
 
@@ -28,6 +26,5 @@ def _main():
 
 if __name__ == '__main__':
     _main()
-
 
 # EOF

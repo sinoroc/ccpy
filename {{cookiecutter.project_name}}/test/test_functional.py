@@ -1,7 +1,6 @@
 """ Functional test
 """
 
-
 import unittest
 
 import webtest
