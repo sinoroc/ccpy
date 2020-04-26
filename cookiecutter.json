@@ -1,7 +1,10 @@
 {
     "project_name": "Thing",
-    "main_package_name": "{{ cookiecutter.project_name | lower }}",
+    "main_package_name": "{{ cookiecutter.project_name | slugify(separator='_') }}",
     "url": "https://pypi.org/project/{{ cookiecutter.project_name }}/",
     "author": "sinoroc",
-    "author_email": "sinoroc.code+python@gmail.com"
+    "author_email": "sinoroc.code+python@gmail.com",
+    "_extensions": [
+        "cookiecutter.extensions.SlugifyExtension"
+    ]
 }
