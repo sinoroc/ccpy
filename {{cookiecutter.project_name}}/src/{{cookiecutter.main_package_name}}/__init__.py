@@ -1,7 +1,6 @@
 #
 
-""" Module initializer
-"""
+"""Module initializer."""
 
 from . import _meta
 from . import main
