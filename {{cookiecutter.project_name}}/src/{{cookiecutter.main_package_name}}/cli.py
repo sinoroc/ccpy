@@ -1,7 +1,6 @@
 #
 
-""" Command line interface
-"""
+"""Command line interface."""
 
 import argparse
 import logging
@@ -10,8 +9,7 @@ from . import _meta
 
 
 def main():
-    """ CLI main function
-    """
+    """CLI main function."""
     logger = logging.getLogger(__name__)
     logging.basicConfig(level=logging.INFO)
     parser = argparse.ArgumentParser(allow_abbrev=False)
