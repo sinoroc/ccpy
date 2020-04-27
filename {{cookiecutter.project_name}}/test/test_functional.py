@@ -1,5 +1,4 @@
-""" Functional test
-"""
+"""Functional tests."""
 
 import unittest
 
@@ -9,8 +8,7 @@ import {{cookiecutter.main_package_name}}
 
 
 class TestFunctional(unittest.TestCase):
-    """ Functional test
-    """
+    """ Functional test."""
 
     def setUp(self):
         wsgi_app = {{cookiecutter.main_package_name}}.main.entry_point({})
@@ -20,8 +18,7 @@ class TestFunctional(unittest.TestCase):
         pass
 
     def test_functional(self):
-        """ Functional test
-        """
+        """Root URL should return HTPP status code 200."""
         self.test_app.get('/', status=200)
 
 
