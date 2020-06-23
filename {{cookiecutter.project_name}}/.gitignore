@@ -15,8 +15,4 @@ __pycache__/
 *.pyc
 
 
-# vi
-.*.swp
-
-
 # EOF
