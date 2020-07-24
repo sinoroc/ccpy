@@ -8,7 +8,7 @@ import logging
 from . import _meta
 
 
-def main():
+def main() -> None:
     """CLI main function."""
     logger = logging.getLogger(__name__)
     logging.basicConfig(level=logging.INFO)
