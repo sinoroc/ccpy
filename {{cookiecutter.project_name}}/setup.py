@@ -7,7 +7,7 @@ import pathlib
 import setuptools
 
 
-def _get_version():
+def _get_version() -> str:
     file_name = 'CHANGELOG.rst'
     line_number = 5
     here_path = pathlib.Path(__file__).resolve().parent
@@ -17,7 +17,7 @@ def _get_version():
     return version
 
 
-def _main():
+def _main() -> None:
     setuptools.setup(
         # see 'setup.cfg'
         version=_get_version(),
