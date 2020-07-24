@@ -9,9 +9,10 @@ python:
   - '3.6'
   - '3.7'
   - '3.8'
+  - '3.9-dev'
 
 install:
-  - 'python3 -m pip install tox tox-travis tox-venv'
+  - 'python3 -m pip install tox tox-travis'
 
 script:
   - 'python3 -m tox'
@@ -24,17 +25,17 @@ deploy:
     file: 'dist/*'
     skip_cleanup: true
     on:
-      python: '3.6'
+      python: '3.8'
       tags: true
   - provider: 'pypi'
     distributions: 'sdist bdist_wheel'
     user: '${PYPI_USER}'
     password: '${PYPI_PASSWORD}'
     on:
-      python: '3.6'
+      python: '3.8'
       tags: true
 
 sudo: false
 
 
-... EOF
+...  # EOF
