@@ -1,16 +1,18 @@
 ..
 
 
-.. contents::
-
-.. sectnum::
-
-
 Overview
 ========
 
 This is a collection of templates for `cookiecutter`_ allowing to quickly
 create the boiler plate for Python projects.
+
+
+Repositories
+============
+
+* https://github.com/sinoroc/ccpy
+* https://gitlab.com/sinoroc/ccpy
 
 
 Templates
@@ -39,7 +41,7 @@ See `cookiecutter documentation`_ for details.
 
 .. Links
 
-.. _`cookiecutter`: https://pypi.python.org/pypi/cookiecutter/
+.. _`cookiecutter`: https://pypi.org/project/cookiecutter/
 .. _`cookiecutter documentation`: https://cookiecutter.readthedocs.io/
 
 
