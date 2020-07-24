@@ -11,8 +11,8 @@ create the boiler plate for Python projects.
 Repositories
 ============
 
-* https://github.com/{{cookiecutter.author}}/{{cookiecutter.project_name}}
-* https://gitlab.com/{{cookiecutter.author}}/{{cookiecutter.project_name}}
+* https://github.com/sinoroc/ccpy
+* https://gitlab.com/sinoroc/ccpy
 
 
 Templates
