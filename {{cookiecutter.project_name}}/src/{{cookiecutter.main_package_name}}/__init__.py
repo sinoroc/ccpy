@@ -1,6 +1,6 @@
 #
 
-"""Package initializer."""
+"""{{cookiecutter.project_name}}."""
 
 from . import _meta
 from . import cli
