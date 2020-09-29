@@ -4,8 +4,7 @@
 Overview
 ========
 
-This is a collection of templates for `cookiecutter`_ allowing to quickly
-create the boiler plate for Python projects.
+This is a collection of templates for `cookiecutter`_ allowing to quickly create the boiler plate for Python projects.
 
 
 Repositories
