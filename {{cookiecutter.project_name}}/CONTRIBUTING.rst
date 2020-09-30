@@ -10,13 +10,11 @@ This project makes extensive use of `tox`_, `pytest`_, and `GNU Make`_.
 Development environment
 -----------------------
 
-Use following command to create a Python virtual environment with all
-necessary dependencies::
+Use following command to create a Python virtual environment with all necessary dependencies::
 
     tox --recreate -e develop
 
-This creates a Python virtual environment in the ``.tox/develop`` directory. It
-can be activated with the following command::
+This creates a Python virtual environment in the ``.tox/develop`` directory. It can be activated with the following command::
 
     . .tox/develop/bin/activate
 
