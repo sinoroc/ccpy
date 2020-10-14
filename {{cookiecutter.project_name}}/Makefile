@@ -90,6 +90,7 @@ review: check
 .PHONY: clean
 clean:
 	$(RM) --recursive ./.eggs/
+	$(RM) --recursive ./.mypy_cache/
 	$(RM) --recursive ./.pytest_cache/
 	$(RM) --recursive ./build/
 	$(RM) --recursive ./dist/
