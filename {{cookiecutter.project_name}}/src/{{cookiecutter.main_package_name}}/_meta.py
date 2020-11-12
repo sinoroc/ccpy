@@ -2,7 +2,7 @@
 
 """Meta information."""
 
-import importlib_metadata
+import importlib_metadata  # type: ignore[import]
 
 PROJECT_NAME = '{{cookiecutter.project_name}}'
 

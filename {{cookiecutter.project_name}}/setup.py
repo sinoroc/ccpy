@@ -4,7 +4,7 @@
 
 import pathlib
 
-import setuptools
+import setuptools  # type: ignore[import]
 
 
 def _get_version() -> str:
