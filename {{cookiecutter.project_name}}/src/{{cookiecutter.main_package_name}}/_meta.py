@@ -2,11 +2,11 @@
 
 """Meta information."""
 
-import importlib_metadata  # type: ignore[import]
+import importlib.metadata
 
 PROJECT_NAME = '{{cookiecutter.project_name}}'
 
-_DISTRIBUTION_METADATA = importlib_metadata.metadata(PROJECT_NAME)
+_DISTRIBUTION_METADATA = importlib.metadata.metadata(PROJECT_NAME)
 
 VERSION = _DISTRIBUTION_METADATA['Version']
 
