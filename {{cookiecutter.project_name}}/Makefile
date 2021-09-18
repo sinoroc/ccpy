@@ -14,7 +14,7 @@ refresh: clean develop review package
 
 .PHONY: develop
 develop:
-	python3 setup.py develop
+	python3 -m pip install --editable .
 
 
 .PHONY: package
