@@ -18,7 +18,7 @@ develop:
 
 
 .PHONY: package
-package: sdist wheel pex
+package: sdist wheel
 
 
 .PHONY: sdist
