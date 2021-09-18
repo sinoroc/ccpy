@@ -18,7 +18,7 @@ develop:
 
 
 .PHONY: package
-package: sdist wheel zapp
+package: sdist wheel
 
 
 .PHONY: sdist
