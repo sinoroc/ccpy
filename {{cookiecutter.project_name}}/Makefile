@@ -35,7 +35,7 @@ wheel:
 
 .PHONY: format
 format:
-	python3 -m yapf --in-place --parallel --recursive setup.py src test
+	python3 -m yapf --in-place --parallel --recursive setup.py $(source_dir) $(tests_dir)
 
 
 .PHONY: check
