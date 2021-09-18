@@ -11,7 +11,7 @@ def _get_version() -> str:
     file_name = 'CHANGELOG.rst'
     line_number = 5
     here_path = pathlib.Path(__file__).resolve().parent
-    with here_path.joinpath(file_name).open() as file_:
+    with here_path.joinpath(file_name).open(encoding='utf-8') as file_:
         changelog = file_.read()
     version = changelog.splitlines()[line_number]
     return version

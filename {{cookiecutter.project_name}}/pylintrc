@@ -19,6 +19,7 @@ load-plugins =
 [MESSAGES CONTROL]
 
 enable =
+    use-symbolic-message-instead,
     useless-suppression,
 
 
