@@ -8,4 +8,43 @@ requires = [
 ]
 
 
+[project]
+name = "{{cookiecutter.project_name}}"
+#
+dependencies = [
+]
+optional-dependencies.dev-package = [
+    "build",
+    "twine",
+]
+optional-dependencies.dev-test = [
+    "mypy",
+    "pycodestyle",
+    "pydocstyle",
+    "pylint",
+    "pytest",
+    "pytest-mypy",
+    "pytest-pycodestyle",
+    "pytest-pydocstyle",
+    "pytest-pylint",
+    "pytest-yapf3",
+    "yapf",
+]
+requires-python = ">=3.8"
+#
+authors = [
+    { name = "{{cookiecutter.author}}", email = "{{cookiecutter.author_email}}" },
+]
+description = "{{cookiecutter.project_name}} library"
+license.text = "Apache-2.0"
+readme = "README.rst"
+urls.PyPI = "https://pypi.org/project/{{cookiecutter.project_name}}/"
+urls.GitHub = "https://github.com/{{cookiecutter.author}}/{{cookiecutter.project_name}}"
+urls.GitLab = "https://gitlab.com/{{cookiecutter.author}}/{{cookiecutter.project_name}}"
+#
+dynamic = [
+    "version",
+]
+
+
 # EOF
