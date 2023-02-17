@@ -5,16 +5,16 @@ source_dir := ./src
 tests_dir := ./test
 
 
-.DEFAULT_GOAL := refresh
+.DEFAULT_GOAL := editable
+
+
+.PHONY: editable
+editable:
+	python -m pip install --editable .
 
 
 .PHONY: refresh
-refresh: clean develop review package
-
-
-.PHONY: develop
-develop:
-	python3 -m pip install --editable .
+refresh: clean editable review package
 
 
 .PHONY: package
@@ -23,59 +23,54 @@ package: sdist wheel
 
 .PHONY: sdist
 sdist:
-	python3 setup.py sdist
-	python3 -m twine check dist/*.tar.gz
+	python -m build --sdist
+	python -m twine check dist/*.tar.gz
 
 
 .PHONY: wheel
 wheel:
-	python3 setup.py bdist_wheel
-	python3 -m twine check dist/*.whl
+	python -m build --wheel
+	python -m twine check dist/*.whl
 
 
 .PHONY: pex
 pex:
-	python3 setup.py bdist_pex
+	python setup.py bdist_pex
 
 
 .PHONY: format
 format:
-	python3 -m yapf --in-place --parallel --recursive setup.py $(source_dir) $(tests_dir)
-
-
-.PHONY: check
-check:
-	python3 setup.py check
+	python -m yapf --in-place --parallel --recursive setup.py $(source_dir) $(tests_dir)
 
 
 .PHONY: lint
 lint:
-	python3 -m pytest --mypy --pycodestyle --pydocstyle --pylint -m 'mypy or pycodestyle or pydocstyle or pylint'
+	python -m pytest --mypy --pycodestyle --pydocstyle --pylint -m 'mypy or pycodestyle or pydocstyle or pylint'
 
 
 .PHONY: mypy
 mypy:
-	python3 -m pytest --mypy -m mypy
+	python -m pytest --mypy -m mypy
 
 
 .PHONY: pycodestyle
 pycodestyle:
-	python3 -m pytest --pycodestyle -m pycodestyle
+	python -m pytest --pycodestyle -m pycodestyle
 
 
 .PHONY: pydocstyle
 pydocstyle:
-	python3 -m pytest --pydocstyle -m pydocstyle
+	python -m pytest --pydocstyle -m pydocstyle
 
 
 .PHONY: pylint
 pylint:
-	python3 -m pytest --pylint -m pylint
+	python -m pytest --pylint -m pylint
 
 
 .PHONY: yapf
 yapf:
-	python3 -m pytest --yapf -m yapf
+	python -m pytest --yapf -m yapf
 
 
 .PHONY: test
@@ -84,12 +79,12 @@ test: pytest
 
 .PHONY: pytest
 pytest:
-	python3 -m pytest
+	python -m pytest
 
 
 .PHONY: review
-review: check
-	python3 -m pytest --mypy --pycodestyle --pydocstyle --pylint
+review:
+	python -m pytest --mypy --pycodestyle --pydocstyle --pylint
 
 
 .PHONY: clean
