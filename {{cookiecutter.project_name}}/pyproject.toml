@@ -9,51 +9,51 @@ requires = [
 
 
 [project]
-name = "{{cookiecutter.project_name}}"
+name = '{{cookiecutter.project_name}}'
 #
 dependencies = [
-    "pyramid",
-    "waitress",
+    'pyramid',
+    'waitress',
 ]
 optional-dependencies.dev-dev = [
-    "watchdog",
+    'watchdog',
 ]
 optional-dependencies.dev-package = [
-    "build",
-    "pex",
-    "twine",
+    'build',
+    'pex',
+    'twine',
 ]
 optional-dependencies.dev-test = [
-    "mypy",
-    "pycodestyle",
-    "pydocstyle",
-    "pylint",
-    "pytest",
-    "pytest-mypy",
-    "pytest-pycodestyle",
-    "pytest-pydocstyle",
-    "pytest-pylint",
-    "pytest-yapf3",
-    "yapf",
-    "WebTest",
+    'mypy',
+    'pycodestyle',
+    'pydocstyle',
+    'pylint',
+    'pytest',
+    'pytest-mypy',
+    'pytest-pycodestyle',
+    'pytest-pydocstyle',
+    'pytest-pylint',
+    'pytest-yapf3',
+    'yapf',
+    'WebTest',
 ]
-requires-python = ">=3.8"
+requires-python = '>=3.8'
 #
-scripts.{{cookiecutter.project_name}} = "pyramid.scripts.pserve:main"
-entry-points."paste.app_factory".main_entry_point = "{{cookiecutter.main_package_name}}.main:entry_point"
+scripts.{{cookiecutter.project_name}} = 'pyramid.scripts.pserve:main'
+entry-points.'paste.app_factory'.main_entry_point = '{{cookiecutter.main_package_name}}.main:entry_point'
 #
 authors = [
-    { name = "{{cookiecutter.author}}", email = "{{cookiecutter.author_email}}" },
+    { name = '{{cookiecutter.author}}', email = '{{cookiecutter.author_email}}' },
 ]
-description = "{{cookiecutter.project_name}} library"
-license.text = "Apache-2.0"
-readme = "README.rst"
-urls.PyPI = "https://pypi.org/project/{{cookiecutter.project_name}}/"
-urls.GitHub = "https://github.com/{{cookiecutter.author}}/{{cookiecutter.project_name}}"
-urls.GitLab = "https://gitlab.com/{{cookiecutter.author}}/{{cookiecutter.project_name}}"
+description = '{{cookiecutter.project_name}} library'
+license.text = 'Apache-2.0'
+readme = 'README.rst'
+urls.PyPI = 'https://pypi.org/project/{{cookiecutter.project_name}}/'
+urls.GitHub = 'https://github.com/{{cookiecutter.author}}/{{cookiecutter.project_name}}'
+urls.GitLab = 'https://gitlab.com/{{cookiecutter.author}}/{{cookiecutter.project_name}}'
 #
 dynamic = [
-    "version",
+    'version',
 ]
 
 
