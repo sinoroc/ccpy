@@ -10,7 +10,7 @@ tests_dir := ./test
 
 .PHONY: editable
 editable:
-	python -m pip install --editable .
+	python -m pip install --editable '.[dev-package,dev-test]'
 
 
 .PHONY: refresh
@@ -45,7 +45,7 @@ format:
 
 .PHONY: lint
 lint:
-	python -m pytest --mypy --pycodestyle --pydocstyle --pylint -m 'mypy or pycodestyle or pydocstyle or pylint'
+	python -m pytest --pycodestyle --pydocstyle --pylint --yapf -m 'pycodestyle or pydocstyle or pylint or yapf'
 
 
 .PHONY: mypy
@@ -84,7 +84,7 @@ pytest:
 
 .PHONY: review
 review:
-	python -m pytest --mypy --pycodestyle --pydocstyle --pylint
+	python -m pytest --mypy --pycodestyle --pydocstyle --pylint --yapf
 
 
 .PHONY: clean
